@@ -1,5 +1,5 @@
 # our base image
-FROM node:14
+FROM node:20
 
 # specify the port number the container should expose
 EXPOSE 3001
@@ -12,9 +12,9 @@ RUN mkdir /app
 
 # Update Linux Packages
 RUN apt-get update && apt-get upgrade -y
-RUN apt-get install mysql-client -y
+RUN apt-get install default-mysql-client -y
 
 # Run update and Strongloop install
-RUN npm install -g npm
-RUN npm install -g pm2
+RUN npm install npm -g
+RUN npm install pm2 -g
 RUN pm2 install pm2-logrotate

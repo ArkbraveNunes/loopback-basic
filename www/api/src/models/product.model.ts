@@ -33,7 +33,6 @@ export class Product extends Entity {
   })
   price: number;
 
-
   constructor(data?: Partial<Product>) {
     super(data);
   }

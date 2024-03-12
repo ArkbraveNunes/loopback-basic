@@ -15,11 +15,11 @@ fi
 echo "Migrating Database..."
 
 # Uncompress Dist
-cd /app/uiq/www/api/ && tar -xzvf dist.tar.gz
+cd /app/loopback-basic/www/api/ && tar -xzvf dist.tar.gz
 
 # Build Docker images
 echo "Building Docker Images..."
-cd /app/uiq/
+cd /app/loopback-basic/
 ./docker/production-build.sh
 
 # Run containers for the first time
